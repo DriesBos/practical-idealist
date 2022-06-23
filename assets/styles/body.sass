@@ -7,11 +7,21 @@
       width: 100%
       object-fit: contain
   
+.page
+  margin-top: var(--vertical-two)
+  & > div, & > section
+    margin-bottom: var(--vertical-one)
+    &:last-child
+      margin-bottom: 0
+
 section
   max-width: 100%
+  padding: 0 var(--spacing-sides)
   img
     max-width: 100%
     user-select: none
+  .title
+    margin-bottom: var(--spacing-one)
 
 .lazy
   opacity: 0
@@ -23,17 +33,26 @@ section
   // border: 1px solid $color-support
   margin: 1rem
 
-header
+.header
   position: relative
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: flex-start
   width: 100%
+  padding: var(--spacing-sides)
+  &-Logo
+    width: 430px
+    img
+      width: 100%
   ul
     display: flex
-    justify-content: flex-end
+    flex-wrap: nowrap
     li
-      padding: 1em .5em
+      padding-right: var(--spacing-one)
       cursor: pointer
     li:last-child
-      padding-right: 1em
+      padding-right: 0
   .nuxt-link-exact-active
     text-decoration: underline
 

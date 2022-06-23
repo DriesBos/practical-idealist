@@ -1,32 +1,28 @@
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: normal
-//   font-style: normal
+@font-face
+  font-family: 'Circular'
+  src: url('~assets/fonts/Circular-Std-Book.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+  
+@font-face
+  font-family: 'Adieu'
+  src: url('~assets/fonts/Adieu-Light.woff') format('woff')
+  font-weight: normal
+  font-style: normal
 
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: normal
-//   font-style: italic
-
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: bold
-//   font-style: normal
 
 // https://www.madebymike.com.au/writing/fluid-type-calc-examples/
 html
-  font-size: 16px
+  font-size: 20px
+  font-family: 'Circular', Helvetica, Arial, sans-serif
 
 @media screen and (min-width: 800px)
   html
-    font-size: calc(16px + 6 * ((100vw - 800px) / 1200))
+    font-size: calc(20px + 5 * ((100vw - 800px) / 1200))
 
 @media screen and (min-width: 2000px)
   html
-    font-size: 22px
+    font-size: 25px
 
 h1, h2, h3, p, a
   word-wrap: break-word
@@ -41,13 +37,21 @@ h1, h2, h3, p, a
   hyphens: none
 
 li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
-  font-family: Helvetica, Arial, sans-serif
-  line-height: 1.5
+  line-height: 2
+  letter-spacing: 0.01rem
   color: $color
   font-style: normal
   font-weight: normal
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+.displayFont
+  font-family: 'Adieu', Helvetica, Arial, sans-serif
+  &-L
+    font-size: 60px
+
+.uppercase
+  text-transform: uppercase
 
 .markdown
   p
