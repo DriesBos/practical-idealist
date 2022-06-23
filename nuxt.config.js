@@ -51,6 +51,8 @@ module.exports = {
   // Auto import components
   components: true,
 
+  target: "static",
+
   // Register CSS files
   css: [
     "@/assets/styles/reset.css",
@@ -71,6 +73,7 @@ module.exports = {
   // Register modules
   modules: [
     "@nuxtjs/axios",
+    "@nuxt/image",
     // "vue-scrollto/nuxt",
     [
       "storyblok-nuxt",
