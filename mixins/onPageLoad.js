@@ -4,13 +4,33 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
+  data() {
+    return {
+      backgroundColor: 0
+    }
+  },
+  watch: {
+    $route() {
+      this.changeBackground()
+      // this.setFirstSectionMargin()
+      // this.changeFavicon()
+    }
+  },
   mounted() {
+    this.changeBackground()
     // this.rotateElement()
     // this.scrollSlow()
     // this.scrollFast()
     // this.scrollHorizontal()
   },
   methods: {
+    changeBackground() {
+      if (this.$route.name == "blog-slug") {
+        document.body.style.backgroundColor = "#A3D2E1"
+      } else {
+        document.body.style.backgroundColor = "#F0EAE8"
+      }
+    },
     scrollSlow() {
       setTimeout(function() {
         var targets = document.querySelectorAll(".scrollSlow")

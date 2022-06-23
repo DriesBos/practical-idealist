@@ -65,8 +65,10 @@
 
 <script>
 import { getAllPosts } from "../../api/posts"
+import onPageLoad from "@/mixins/onPageLoad"
 
 export default {
+  mixins: [onPageLoad],
   async asyncData() {
     const posts = await getAllPosts()
     return { posts: posts }
