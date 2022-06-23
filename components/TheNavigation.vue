@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <div class="header-Logo">
-      <img src="logo-wide.png" />
-    </div>
+    <nuxt-link class="header-Logo" to="/" tag="div">
+      <img src="/logo-wide.png" />
+    </nuxt-link>
     <nav class="displayFont uppercase">
       <ul>
         <nuxt-link to="/blog" tag="li">Essays</nuxt-link>

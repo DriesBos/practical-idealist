@@ -23,32 +23,43 @@
       </div>
     </section>
 
-    <ul class="articleList">
-      <li v-for="(post, key) in posts" :key="key">
-        <div class="articleList-Image">
-          <img :src="post.feature_image" />
-        </div>
+    <section>
+      <ul class="articleList">
+        <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
+          <nuxt-link
+            :to="'/blog/' + post.slug"
+            title="to article"
+            tag="div"
+            class="articleList-Image imageWindow imageWindow-S"
+          >
+            <img :src="post.feature_image" />
+          </nuxt-link>
 
-        <div class="articleList-Content">
-          <nuxt-link :to="'/blog/' + post.slug" title="to article" tag="div">
+          <nuxt-link
+            :to="'/blog/' + post.slug"
+            title="to article"
+            tag="div"
+            class="articleList-Content"
+          >
             <div>
-              <p>{{ post.title }}</p>
+              <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
             </div>
 
-            <div>
-              <ul class="authorList">
+            <div class="authorList">
+              <ul>
                 <li v-for="(author, index) in post.authors" :key="index">
-                  <p>{{ author.name }}</p>
+                  <h2>by {{ author.name }}</h2>
                 </li>
               </ul>
             </div>
+
+            <div>
+              <p class="typeSecondary lineClamp">{{ post.excerpt }}</p>
+            </div>
           </nuxt-link>
-          <div>
-            <p>{{ post.excerpt }}</p>
-          </div>
-        </div>
-      </li>
-    </ul>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 

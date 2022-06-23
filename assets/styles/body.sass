@@ -8,11 +8,13 @@
       object-fit: contain
   
 .page
-  margin-top: var(--vertical-two)
+  margin: var(--vertical-four) 0
   & > div, & > section
-    margin-bottom: var(--vertical-one)
+    margin-bottom: var(--vertical-three)
     &:last-child
       margin-bottom: 0
+  &-Article
+    margin-top: var(--vertical-two)
 
 section
   max-width: 100%
@@ -29,9 +31,8 @@ section
   &[lazy="loaded"]
     opacity: 1
 
-.item
-  // border: 1px solid $color-support
-  margin: 1rem
+// .item
+//   margin: 1rem
 
 .header
   position: relative
@@ -43,6 +44,7 @@ section
   padding: var(--spacing-sides)
   &-Logo
     width: 430px
+    cursor: pointer
     img
       width: 100%
   ul
@@ -55,6 +57,71 @@ section
       padding-right: 0
   .nuxt-link-exact-active
     text-decoration: underline
+
+.articleList
+  display: flex
+  flex-direction: column
+  &-Item
+    cursor: pointer
+    display: flex
+    flex-wrap: nowrap
+    margin-bottom: var(--vertical-two)
+    &:last-child
+      margin-bottom: 0
+  &-Image
+    flex-shrink: 0
+    margin-right: var(--spacing-one)
+  &-Content
+    display: flex
+    flex-direction: column
+    & > div
+      margin-bottom: .5rem
+      &:last-child
+        margin-top: 1rem
+        margin-bottom: 0
+
+.articleSingle
+  &-Landing
+    height: 100vh
+    width: 100%
+    position: relative
+    margin-bottom: var(--vertical-two)
+  &-Title
+    padding: 0 var(--spacing-sides)
+    h1
+      text-align: center
+
+.authorList
+  display: flex
+  flex-wrap: wrap
+  h1, h2, p
+   font-family: 'Adieu', Helvetica, Arial, sans-serif
+   font-size: 1.25rem
+   color: $type-secondary
+
+.imageWindow
+  position: relative
+  border: 1px solid $type
+  border-radius: 1000px
+  img
+    padding: .5em
+    width: 100%
+    height: 100%
+    border-radius: 1000px
+    object-fit: cover
+  &-S
+    width: 265px
+    height: 350px
+  &-Full
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    width:  74vh
+    transform: translateX(50%)
+
+
+
 
 // Aspect ratio CSS
 .aspectRatioOutside

@@ -13,16 +13,16 @@
 
 // https://www.madebymike.com.au/writing/fluid-type-calc-examples/
 html
-  font-size: 20px
+  font-size: 16px
   font-family: 'Circular', Helvetica, Arial, sans-serif
 
 @media screen and (min-width: 800px)
   html
-    font-size: calc(20px + 5 * ((100vw - 800px) / 1200))
+    font-size: calc(16px + 8 * ((100vw - 800px) / 1200))
 
 @media screen and (min-width: 2000px)
   html
-    font-size: 25px
+    font-size: 24px
 
 h1, h2, h3, p, a
   word-wrap: break-word
@@ -37,44 +37,57 @@ h1, h2, h3, p, a
   hyphens: none
 
 li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
-  line-height: 2
-  letter-spacing: 0.01rem
-  color: $color
+  line-height: 1.5
+  letter-spacing: 0.01em
+  color: $type
   font-style: normal
   font-weight: normal
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+p
+  line-height: 1.75
+
 .displayFont
   font-family: 'Adieu', Helvetica, Arial, sans-serif
+  &-M
+    font-size: 2rem
+    line-height: 1.05
   &-L
-    font-size: 60px
+    font-size: 3rem
+    line-height: 1.05
+  &-L
+    font-size: 3.5rem
+    line-height: 1.05
 
+.typeSecondary
+  color: $type-secondary
+  
 .uppercase
   text-transform: uppercase
 
 .markdown
-  p
-    font-size: $type-size-p
-  h1
-    font-size: $type-size-h1
-  h2
-    font-size: $type-size-h2
-  h3
-    font-size: $type-size-h3
-  h4
-    font-size: $type-size-h4
-  h5
-    font-size: $type-size-h5
+  // p
+  //   font-size: $type-size-p
+  // h1
+  //   font-size: $type-size-h1
+  // h2
+  //   font-size: $type-size-h2
+  // h3
+  //   font-size: $type-size-h3
+  // h4
+  //   font-size: $type-size-h4
+  // h5
+  //   font-size: $type-size-h5
   a
-    color: $color
+    color: $type
     text-decoration: underline
   strong
     font-weight: bold
   em
     font-style: italic
-  blockquote, blockquote p
-    font-size: $type-size-blockquote
+  // blockquote, blockquote p
+  //   font-size: $type-size-blockquote
   p, h1, h2, h3, h4, h5, blockquote
     margin-bottom: $lineheight
   p
@@ -91,8 +104,7 @@ li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, 
 
 .lineClamp // Limit excerpt to X lines
   display: -webkit-box
-  -webkit-line-clamp: 3
+  -webkit-line-clamp: 4
   -webkit-box-orient: vertical
   text-overflow: ellipsis
   overflow: hidden
-  white-space: nowrap

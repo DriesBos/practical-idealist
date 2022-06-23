@@ -52,5 +52,5 @@ export default {
 .item
   &-Images
     &_Single
-      // border: 1px solid $color-support
+      // border: 1px solid $type-support
 </style>

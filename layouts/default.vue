@@ -5,6 +5,6 @@
     <transition name="pages" mode="out-in">
       <nuxt />
     </transition>
-    <LazyTheFooter />
+    <!-- <LazyTheFooter /> -->
   </main>
 </template>
