@@ -1,40 +1,41 @@
 <template>
-  <div v-editable="story.content" class="page-Blog">
-    <component
-      :is="story.content.component | dashify"
-      v-if="story.content.component"
-      :key="story.content._uid"
-      :blok="story.content"
-    ></component>
+  <div>
+    <ul class="articleList">
+      <li v-for="(post, key) in posts" :key="key">
+        <div class="articleList-Image">
+          <img :src="post.feature_image" />
+        </div>
+
+        <div class="articleList-Content">
+          <nuxt-link :to="'/blog/' + post.slug" title="to article" tag="div">
+            <div>
+              <p>{{ post.title }}</p>
+            </div>
+
+            <div>
+              <ul class="authorList">
+                <li v-for="(author, index) in post.authors" :key="index">
+                  <p>{{ author.name }}</p>
+                </li>
+              </ul>
+            </div>
+          </nuxt-link>
+          <div>
+            <p>{{ post.excerpt }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
+import { getAllPosts } from "../../api/posts"
+
 export default {
-  asyncData(context) {
-    return context.app.$storyapi
-      .get("cdn/stories/blog/", {
-        version: process.env.NODE_ENV == "production" ? "published" : "draft"
-      })
-      .then(res => {
-        return res.data
-      })
-      .catch(res => {
-        context.error({
-          statusCode: res.response.status,
-          message: res.response.data
-        })
-      })
-  },
-  data() {
-    return {
-      story: { content: {} }
-    }
-  },
-  head() {
-    return {
-      title: this.story.name + " — SITE TITLE"
-    }
+  async asyncData() {
+    const posts = await getAllPosts()
+    return { posts: posts }
   }
 }
 </script>
