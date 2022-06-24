@@ -12,43 +12,7 @@
           without beauty, it’s all for nought."
     />
 
-    <div class="item">
-      <ul class="articleList">
-        <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
-          <nuxt-link
-            :to="'/blog/' + post.slug"
-            title="to article"
-            tag="div"
-            class="articleList-Image imageWindow imageWindow-S"
-          >
-            <img :src="post.feature_image" />
-          </nuxt-link>
-
-          <nuxt-link
-            :to="'/blog/' + post.slug"
-            title="to article"
-            tag="div"
-            class="articleList-Content"
-          >
-            <div>
-              <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
-            </div>
-
-            <div class="authorList">
-              <ul>
-                <li v-for="(author, index) in post.authors" :key="index">
-                  <h2>by {{ author.name }}</h2>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p class="typeSecondary lineClamp">{{ post.excerpt }}</p>
-            </div>
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
+    <ArticleList :posts="posts" type="horizontal" />
   </div>
 </template>
 
