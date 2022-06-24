@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <ContentBlock>
+    <ContentBlock nav>
       <Intro
         titleStart="Original"
         titleEnd="Essays"

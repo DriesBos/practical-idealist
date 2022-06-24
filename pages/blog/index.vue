@@ -12,7 +12,7 @@
           without beauty, it’s all for nought."
     />
 
-    <section>
+    <div class="item">
       <ul class="articleList">
         <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
           <nuxt-link
@@ -48,7 +48,7 @@
           </nuxt-link>
         </li>
       </ul>
-    </section>
+    </div>
   </div>
 </template>
 
