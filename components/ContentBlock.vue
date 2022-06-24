@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ nav: nav }" class="contentBlock">
+  <div :class="{ nav: nav }" :style="style" class="contentBlock">
     <ul v-if="nav" class="contentBlock-Nav">
       <li class="displayFont-Btn uppercase btn">Essays</li>
       <li class="displayFont-Btn uppercase btn">Video</li>
@@ -12,7 +12,16 @@
 <script>
 export default {
   props: {
-    nav: Boolean
+    nav: Boolean,
+    bg: {
+      type: String,
+      default: "#B4ABAB"
+    }
+  },
+  computed: {
+    style() {
+      return "background-color: " + this.bg
+    }
   }
 }
 </script>

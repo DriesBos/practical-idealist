@@ -5,7 +5,7 @@
         {{ titleStart }} <span class="typeStroke">{{ titleEnd }}</span>
       </h1>
     </div>
-    <div class="item-Intro_Content">
+    <div v-if="textContent" class="item-Intro_Content">
       <p>
         {{ textContent }}
       </p>
