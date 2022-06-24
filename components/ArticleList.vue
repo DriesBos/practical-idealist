@@ -114,17 +114,6 @@ export default {
 .articleList
   width: 100%
   padding: 0 var(--spacing-sides)
-  li
-    display: flex
-    flex-wrap: nowrap
-    flex-shrink: 0
-    margin-bottom: var(--vertical-two)
-    cursor: pointer
-    &:last-child
-      margin-bottom: 0
-  &-Image
-    flex-shrink: 0
-    margin-right: 2rem
   &-Content
     display: flex
     flex-direction: column
@@ -145,6 +134,9 @@ export default {
         cursor: pointer
         &:last-child
           margin-bottom: 0
+        .articleList-Image
+          flex-shrink: 0
+          margin-right: 2rem
         .articleList-Content_Text
           max-width: $max-width
 
@@ -160,6 +152,9 @@ export default {
         cursor: pointer
         &:last-child
           margin-bottom: 0
+        .articleList-Image
+          flex-shrink: 0
+          margin-right: 2rem
         .articleList-Content_Text
           max-width: $max-width
 
@@ -173,6 +168,4 @@ export default {
         flex-direction: column
         max-width: 28vw
         margin-right: var(--vertical-three)
-        .articleList-Image
-          margin-bottom: 1.75rem
 </style>
