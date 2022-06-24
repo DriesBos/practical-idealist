@@ -31,5 +31,5 @@ export default {
   &_Title
     margin-bottom: 1.5rem
   &_Content
-    max-width: 58em
+    max-width: 56em
 </style>
