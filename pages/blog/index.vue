@@ -12,7 +12,7 @@
           without beauty, it’s all for nought."
     />
 
-    <ArticleList :posts="posts" type="horizontal" />
+    <ArticleList :posts="posts" type="vertical-one" />
   </div>
 </template>
 

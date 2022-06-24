@@ -12,6 +12,7 @@
           we value systems thinking, actionable idealism, and beauty—because
           without beauty, it’s all for nought."
       />
+      <ArticleList :posts="posts" type="vertical-two" />
     </ContentBlock>
   </div>
 </template>
