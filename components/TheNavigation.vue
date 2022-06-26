@@ -19,3 +19,30 @@ export default {
   name: "TheNavigation"
 }
 </script>
+
+<style lang="sass">
+.header
+  position: relative
+  display: flex
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: flex-start
+  width: 100%
+  padding: 2.5rem
+  padding-bottom: 0
+  &-Logo
+    width: 430px
+    cursor: pointer
+    img
+      width: 100%
+  ul
+    display: flex
+    flex-wrap: nowrap
+    li
+      padding-right: 2.5rem
+      cursor: pointer
+    li:last-child
+      padding-right: 0
+  .nuxt-link-exact-active
+    text-decoration: underline
+</style>

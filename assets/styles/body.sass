@@ -7,7 +7,8 @@ body
   // border: 2px solid green
   .item
     // border: 2px solid blue
-    margin-bottom: var(--vertical-three)
+    opacity: 0
+    margin-bottom: 150px
 
 section
   max-width: 100%
@@ -68,36 +69,11 @@ section
     flex-direction: column
     justify-content: center
 
-.lazy
-  opacity: 0
-  transition: opacity $trans-img
-  &[lazy="loaded"]
-    opacity: 1
-
-.header
-  position: relative
-  display: flex
-  flex-wrap: nowrap
-  justify-content: space-between
-  align-items: flex-start
-  width: 100%
-  padding: var(--spacing-sides)
-  padding-bottom: 0
-  &-Logo
-    width: 430px
-    cursor: pointer
-    img
-      width: 100%
-  ul
-    display: flex
-    flex-wrap: nowrap
-    li
-      padding-right: var(--spacing-one)
-      cursor: pointer
-    li:last-child
-      padding-right: 0
-  .nuxt-link-exact-active
-    text-decoration: underline
+// .lazy
+//   opacity: 0
+//   transition: opacity $trans-img
+//   &[lazy="loaded"]
+//     opacity: 1
 
 .articleSingle
   &-Landing
@@ -129,7 +105,9 @@ section
 
 .imageWindow
   position: relative
-  border: 1px solid $type
+  border-width: 1px
+  border-style: solid
+  border-color: inherit
   border-radius: 1000px
   img
     padding: .5em

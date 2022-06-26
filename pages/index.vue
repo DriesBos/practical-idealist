@@ -55,21 +55,21 @@
     <ContentBlock color="white" bg="#B4ABAB">
       <Intro color="white" titleStart="Curated" titleEnd="Essays" />
       <ArticleList :posts="posts" type="vertical-two" />
-      <nuxt-link class="item btn btn-Wide white" to="/curated" tag="li">
+      <nuxt-link class="btn btn-Wide white" to="/curated" tag="li">
         see all essays
       </nuxt-link>
     </ContentBlock>
     <ContentBlock color="white" bg="#212121">
       <Intro color="white" titleStart="Curated" titleEnd="Videos" />
       <ArticleList :posts="posts" type="vertical-two" />
-      <nuxt-link class="item btn btn-Wide white" to="/curated" tag="li">
+      <nuxt-link class="btn btn-Wide white" to="/curated" tag="li">
         see all videos
       </nuxt-link>
     </ContentBlock>
     <ContentBlock bg="white">
       <Intro color="black" titleStart="Curated" titleEnd="Art" />
       <ArticleList :posts="posts" type="vertical-two" />
-      <nuxt-link class="item btn btn-Wide" to="/curated" tag="li">
+      <nuxt-link class="btn btn-Wide" to="/curated" tag="li">
         see all art
       </nuxt-link>
     </ContentBlock>
