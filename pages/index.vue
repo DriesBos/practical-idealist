@@ -2,9 +2,21 @@
   <div class="page">
     <div class="item landingHome"></div>
     <ArticleList :posts="posts" type="horizontal" />
-    <nuxt-link class="item btn btn-Wide" to="/blog" tag="li"
-      >see all essays</nuxt-link
-    >
+    <nuxt-link class="item btn btn-Wide" to="/blog" tag="li">
+      see all essays
+    </nuxt-link>
+    <ContentBlock color="white" bg="#B4ABAB">
+      <Intro titleStart="Curated" titleEnd="Essays" />
+      <ArticleList :posts="posts" type="vertical-two" />
+    </ContentBlock>
+    <ContentBlock color="white" bg="#212121">
+      <Intro titleStart="Curated" titleEnd="Essays" />
+      <ArticleList :posts="posts" type="vertical-two" />
+    </ContentBlock>
+    <ContentBlock bg="white">
+      <Intro titleStart="Curated" titleEnd="Essays" />
+      <ArticleList :posts="posts" type="vertical-two" />
+    </ContentBlock>
   </div>
 </template>
 
