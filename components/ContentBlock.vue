@@ -39,9 +39,12 @@ export default {
   background-color: #B4ABAB
   width: auto
   margin: 0 1em
-  padding: var(--spacing-sides) 0
+  padding-top: var(--vertical-three)
+  padding-bottom: var(--spacing-sides)
   border-radius: 60px
   color: inherit
+  & .item:last-child
+    margin-bottom: 0
   h1, h2, h3, h4, h5, h6, p, a, p
     color: inherit
   &.nav
