@@ -169,4 +169,8 @@ export default {
         flex-direction: column
         max-width: 28vw
         margin-right: var(--vertical-three)
+        .articleList-Image
+          margin-bottom: 1.75rem
+        .authorList
+          margin-top: 1rem
 </style>

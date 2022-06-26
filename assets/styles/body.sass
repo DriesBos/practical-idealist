@@ -4,9 +4,9 @@ body
   
 .page
   margin: var(--vertical-three) 0
-  border: 2px solid green
+  // border: 2px solid green
   .item
-    border: 2px solid blue
+    // border: 2px solid blue
     margin-bottom: var(--vertical-three)
 
 section
@@ -24,8 +24,8 @@ section
   color: $type
   border: 1px solid $type
   border-radius: 2rem
-  min-width: 8.75rem
-  padding: 0.75rem
+  min-width: $button-min-width
+  padding: 1.1rem 2.5rem
   text-align: center
   &:hover
     background-color: $type
@@ -39,16 +39,40 @@ section
     &:hover
       background-color: white
       color: $type
+    
+.btn-Container
+  display: flex
+  li
+    margin-right: 2rem
+    &:last-child
+      margin-right: 0
 
+.aboutFeature
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+  width: auto
+  height: 20rem
+  margin: var(--spacing-sides)
+  border: 1px solid $type
+  border-radius: 10rem
+  &-Image
+    width: 15rem
+    height: 15rem
+    img
+      width: 100%
+      height: 100%
+      object-fit: contain
+  &-Content
+    display: flex
+    flex-direction: column
+    justify-content: center
 
 .lazy
   opacity: 0
   transition: opacity $trans-img
   &[lazy="loaded"]
     opacity: 1
-
-// .item
-//   margin: 1rem
 
 .header
   position: relative
@@ -58,6 +82,7 @@ section
   align-items: flex-start
   width: 100%
   padding: var(--spacing-sides)
+  padding-bottom: 0
   &-Logo
     width: 430px
     cursor: pointer
@@ -85,6 +110,23 @@ section
     h1
       text-align: center
 
+.landingIndex
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  margin: 0 9.375vw
+  & > div
+    display: flex
+    flex-direction: column
+  &-Left
+    margin-right: 6.25vw
+    h1, h2, p, .authorList
+      margin-bottom: 2rem
+    .lineClamp
+      -webkit-line-clamp: 6
+    .btn
+      width: $button-min-width
+
 .imageWindow
   position: relative
   border: 1px solid $type
@@ -96,11 +138,14 @@ section
     border-radius: 1000px
     object-fit: cover
   &-S
-    width: 265px
-    height: 350px
+    width: 16.5vw
+    height: calc(16.5vw * 1.33)
   &-Horizontal
-    width: 28vw
-    height: 40vw
+    width: 22vw
+    height: calc(22vw * 1.33)
+  &-Feature
+    width: calc(50vw - 150px)
+    height: calc((50vw - 150px) * 1.33)
   &-Full
     position: absolute
     top: 0

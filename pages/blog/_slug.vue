@@ -8,13 +8,7 @@
 
     <div class="articleSingle-Title displayFont displayFont-L">
       <h1>{{ post.title }}</h1>
-      <div class="authorList">
-        <ul>
-          <li v-for="(author, index) in post.authors" :key="index">
-            <h2>by {{ author.name }}</h2>
-          </li>
-        </ul>
-      </div>
+      <AuthorList :authors="post.authors" />
     </div>
 
     <div v-html="post.html" />

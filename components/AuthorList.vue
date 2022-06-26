@@ -2,7 +2,7 @@
   <div class="authorList">
     <ul>
       <li v-for="(author, index) in authors" :key="index">
-        <h2>by {{ author.name }}</h2>
+        <span>by {{ author.name }}</span>
       </li>
     </ul>
   </div>
@@ -18,12 +18,13 @@ export default {
 
 <style lang="sass">
 .authorList
-  display: flex
-  flex-wrap: wrap
-  h1, h2, p
+  h1, h2, p, span
    font-family: 'Adieu', Helvetica, Arial, sans-serif
    font-size: 1.25rem
-   color: $type-secondary
+   color: inherit
+   opacity: .5
+   width: 100%
   ul
     padding: 0 !important
+    display: inline-flex
 </style>
