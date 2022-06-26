@@ -6,15 +6,15 @@
       see all essays
     </nuxt-link>
     <ContentBlock color="white" bg="#B4ABAB">
-      <Intro titleStart="Curated" titleEnd="Essays" />
+      <Intro color="white" titleStart="Curated" titleEnd="Essays" />
       <ArticleList :posts="posts" type="vertical-two" />
     </ContentBlock>
     <ContentBlock color="white" bg="#212121">
-      <Intro titleStart="Curated" titleEnd="Essays" />
+      <Intro color="white" titleStart="Curated" titleEnd="Essays" />
       <ArticleList :posts="posts" type="vertical-two" />
     </ContentBlock>
     <ContentBlock bg="white">
-      <Intro titleStart="Curated" titleEnd="Essays" />
+      <Intro color="black" titleStart="Curated" titleEnd="Essays" />
       <ArticleList :posts="posts" type="vertical-two" />
     </ContentBlock>
   </div>

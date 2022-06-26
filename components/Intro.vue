@@ -2,7 +2,8 @@
   <div class="item intro">
     <div class="intro_Title">
       <h1 class="displayFont displayFont-L uppercase">
-        {{ titleStart }} <span class="typeStroke">{{ titleEnd }}</span>
+        {{ titleStart }}
+        <span class="typeStroke" :style="styleObject">{{ titleEnd }}</span>
       </h1>
     </div>
     <div v-if="textContent" class="intro_Content">
@@ -18,7 +19,18 @@ export default {
   props: {
     titleStart: String,
     titleEnd: String,
-    textContent: String
+    textContent: String,
+    color: {
+      type: String,
+      default: "$type"
+    }
+  },
+  data() {
+    return {
+      styleObject: {
+        textStrokeColor: this.color
+      }
+    }
   }
 }
 </script>
