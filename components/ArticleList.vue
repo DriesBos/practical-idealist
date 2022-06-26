@@ -159,6 +159,7 @@ export default {
           max-width: $max-width
 
   &.horizontal
+    padding-right: 0
     ul
       display: flex
       flex-direction: row

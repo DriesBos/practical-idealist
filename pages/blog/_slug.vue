@@ -23,10 +23,11 @@
 
 <script>
 import { getSinglePost } from "../../api/posts"
+import lazyLoadComponents from "@/mixins/lazyLoadComponents"
 import onPageLoad from "@/mixins/onPageLoad"
 
 export default {
-  mixins: [onPageLoad],
+  mixins: [lazyLoadComponents, onPageLoad],
   async asyncData({ params }) {
     const post = await getSinglePost(params.slug)
     return { post: post }

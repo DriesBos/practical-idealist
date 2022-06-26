@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ nav: nav }" :style="style" class="contentBlock">
+  <div :class="{ nav: nav }" class="item contentBlock" :style="styleObject">
     <ul v-if="nav" class="contentBlock-Nav">
       <li class="displayFont-Btn uppercase btn">Essays</li>
       <li class="displayFont-Btn uppercase btn">Video</li>
@@ -16,11 +16,18 @@ export default {
     bg: {
       type: String,
       default: "#B4ABAB"
+    },
+    color: {
+      type: String,
+      default: "$type"
     }
   },
-  computed: {
-    style() {
-      return "background-color: " + this.bg
+  data() {
+    return {
+      styleObject: {
+        color: this.color,
+        backgroundColor: this.bg
+      }
     }
   }
 }
@@ -34,8 +41,12 @@ export default {
   margin: 0 1em
   padding: var(--spacing-sides) 0
   border-radius: 60px
+  color: inherit
+  h1, h2, h3, h4, h5, h6, p, a, p
+    color: inherit
   &.nav
     padding-top: var(--vertical-four)
+    color: inherit
   &-Nav
     position: absolute
     top: 0
@@ -43,8 +54,10 @@ export default {
     display: flex
     flex-wrap: nowrap
     padding: 1.5rem
+    color: inherit
     li
       margin-right: 1.5rem
+      color: inherit
       &:last-child
         margin-right: 0
 </style>

@@ -8,3 +8,12 @@
     <!-- <LazyTheFooter /> -->
   </main>
 </template>
+
+<script>
+import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+import onPageLoad from "@/mixins/onPageLoad"
+
+export default {
+  mixins: [lazyLoadComponents, onPageLoad]
+}
+</script>

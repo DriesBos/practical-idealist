@@ -1,11 +1,11 @@
 <template>
-  <div class="item-Intro">
-    <div class="item-Intro_Title">
+  <div class="item intro">
+    <div class="intro_Title">
       <h1 class="displayFont displayFont-L uppercase">
         {{ titleStart }} <span class="typeStroke">{{ titleEnd }}</span>
       </h1>
     </div>
-    <div v-if="textContent" class="item-Intro_Content">
+    <div v-if="textContent" class="intro_Content">
       <p>
         {{ textContent }}
       </p>
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="sass">
-.item-Intro
+.intro
   padding: 0 var(--spacing-sides)
   h1
     line-height: 1

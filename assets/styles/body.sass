@@ -1,16 +1,13 @@
 body
   background-color: #F0EAE8
-  .item
-    border: 1px solid green
+  transition: background-color 1s ease .165s
   
 .page
-  margin: var(--vertical-four) 0
-  & > div, & > section
+  margin: var(--vertical-three) 0
+  border: 2px solid green
+  .item
+    border: 2px solid blue
     margin-bottom: var(--vertical-three)
-    &:last-child
-      margin-bottom: 0
-  &-Article
-    margin-top: var(--vertical-two)
 
 section
   max-width: 100%
@@ -24,15 +21,25 @@ section
 .btn
   cursor: pointer
   transition: all .33s ease
-  color: white
-  border: 1px solid white
+  color: $type
+  border: 1px solid $type
   border-radius: 2rem
   min-width: 8.75rem
   padding: 0.75rem
   text-align: center
   &:hover
-    background-color: white
-    color: $type
+    background-color: $type
+    color: white
+  &-Wide
+    width: auto
+    margin: 0 var(--spacing-sides)
+  &.white
+    color: white
+    border: 1px solid white
+    &:hover
+      background-color: white
+      color: $type
+
 
 .lazy
   opacity: 0
