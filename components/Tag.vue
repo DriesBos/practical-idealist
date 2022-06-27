@@ -1,5 +1,5 @@
 <template>
-  <div :class="color" class="tag" :style="styleObject">
+  <div :class="color" class="tag cursorInteract" :style="styleObject">
     {{ content }}
   </div>
 </template>
@@ -25,7 +25,6 @@ export default {
 
 <style lang="sass">
 .tag
-  cursor: pointer
   transition: all .33s ease
   color: inherit
   font-family: 'Adieu', Helvetica, Arial, sans-serif

@@ -32,7 +32,6 @@ export default {
   padding-bottom: 0
   &-Logo
     width: 430px
-    cursor: pointer
     img
       width: 100%
   ul
@@ -40,7 +39,6 @@ export default {
     flex-wrap: nowrap
     li
       padding-right: 2.5rem
-      cursor: pointer
     li:last-child
       padding-right: 0
   .nuxt-link-exact-active

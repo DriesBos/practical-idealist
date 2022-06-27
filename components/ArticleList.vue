@@ -166,7 +166,6 @@ export default {
         display: flex
         flex-wrap: nowrap
         margin-bottom: var(--vertical-two)
-        cursor: pointer
         &:last-child
           margin-bottom: 0
         .articleList-Image
@@ -184,7 +183,6 @@ export default {
         flex-wrap: nowrap
         flex-shrink: 1
         margin-bottom: var(--vertical-two)
-        cursor: pointer
         &:last-child
           margin-bottom: 0
         .articleList-Image

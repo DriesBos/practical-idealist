@@ -1,6 +1,7 @@
 body
   background-color: #F0EAE8
   transition: background-color 1s ease .165s
+  cursor: none
   
 .page
   margin: var(--vertical-three) 0
@@ -31,6 +32,25 @@ section
   &.filter
     li 
       margin-right: 1rem
+
+.cursor
+  position: fixed
+  z-index: 999
+  pointer-events: none
+  opacity: 1
+  width: 1rem
+  height: 1rem
+  background-color: $type
+  transform: translate(-50%, -50%)
+  border-radius: 50%
+  transition: width .165s ease, height .165s ease, opacity .165s ease
+  &.active
+    opacity: 0.5
+    width: 2rem
+    height: 2rem
+
+.cursorInteract
+  pointer-events: auto
 
 .aboutFeature
   display: flex

@@ -1,5 +1,5 @@
 <template>
-  <div :class="color" class="btn" :style="styleObject">
+  <div :class="color" class="btn cursorInteract" :style="styleObject">
     {{ content }}
   </div>
 </template>
@@ -25,7 +25,6 @@ export default {
 
 <style lang="sass">
 .btn
-  cursor: pointer
   transition: all .33s ease
   color: inherit
   border-style: solid

@@ -11,7 +11,9 @@
           Pragmatism, explaining that truth, according to the pragmatist, is
           simply what works.
         </p>
-        <nuxt-link class="btn" to="/curated" tag="div">read</nuxt-link>
+        <nuxt-link class="btn cursorInteract" to="/curated" tag="div"
+          >read</nuxt-link
+        >
       </div>
       <div class="landingIndex-Right">
         <nuxt-link
