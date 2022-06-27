@@ -67,6 +67,25 @@
         </li>
       </template>
 
+      <!-- SIMPLELIST -->
+      <template v-else-if="type === 'simplelist'">
+        <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
+          <nuxt-link
+            :to="'/blog/' + post.slug"
+            title="to article"
+            tag="div"
+            class="articleList-Content"
+          >
+            <div>
+              <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
+            </div>
+            <div class="tagFont articleList-Content_Tag">
+              curated essay
+            </div>
+          </nuxt-link>
+        </li>
+      </template>
+
       <!-- VERTICAL ONE -->
       <template v-else>
         <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
@@ -117,11 +136,27 @@ export default {
   &-Content
     display: flex
     flex-direction: column
-    & > div
-      margin-bottom: .5rem
-      &:last-child
-        margin-top: 1rem
-        margin-bottom: 0
+
+  &.simplelist
+    ul
+      display: flex
+      flex-direction: column
+      flex-wrap: nowrap
+      li
+        width: 100%
+        padding: 2rem 0
+        border-bottom: 1px solid $type
+        &:first-child
+          margin-top: 0
+        .articleList-Content
+          flex-direction: row
+          justify-content: space-between
+          align-items: center
+          & > div
+            &:first-child
+              padding-right: 5em
+            &:last-child
+              flex-shrink: 0
 
   &.vertical-one
     ul

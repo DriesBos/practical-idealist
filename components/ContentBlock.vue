@@ -1,5 +1,9 @@
 <template>
-  <div :class="{ nav: nav }" class="item contentBlock" :style="styleObject">
+  <div
+    :class="{ nav: nav, border: border }"
+    class="item contentBlock"
+    :style="styleObject"
+  >
     <ul v-if="nav" class="contentBlock-Nav">
       <li class="displayFont-Btn uppercase btn">Essays</li>
       <li class="displayFont-Btn uppercase btn">Video</li>
@@ -13,6 +17,7 @@
 export default {
   props: {
     nav: Boolean,
+    border: Boolean,
     bg: {
       type: String,
       default: "#B4ABAB"
@@ -50,6 +55,10 @@ export default {
   &.nav
     padding-top: var(--vertical-four)
     color: inherit
+  &.border
+    border-style: solid
+    border-width: 1px
+    border-color: inherit
   &-Nav
     position: absolute
     top: 0
@@ -63,4 +72,6 @@ export default {
       color: inherit
       &:last-child
         margin-right: 0
+  .btn-Container
+    padding: 0 var(--spacing-sides)
 </style>

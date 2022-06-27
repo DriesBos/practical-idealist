@@ -26,7 +26,7 @@ section
   border: 1px solid $type
   border-radius: 2rem
   min-width: $button-min-width
-  padding: 1.1rem 2.5rem
+  padding: 1rem 2.5rem
   text-align: center
   &:hover
     background-color: $type
@@ -40,13 +40,21 @@ section
     &:hover
       background-color: white
       color: $type
+  &.filter
+    text-transform: uppercase
     
 .btn-Container
   display: flex
+  flex-wrap: wrap
+  margin-bottom: -1rem
   li
     margin-right: 2rem
+    margin-bottom: 1rem
     &:last-child
       margin-right: 0
+  &.filter
+    li 
+      margin-right: 1rem
 
 .aboutFeature
   display: flex
