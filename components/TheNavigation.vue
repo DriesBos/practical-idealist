@@ -5,10 +5,10 @@
     </nuxt-link>
     <nav class="displayFont uppercase">
       <ul>
-        <nuxt-link to="/blog" tag="li">Essays</nuxt-link>
+        <nuxt-link to="/essays" tag="li">Essays</nuxt-link>
         <nuxt-link to="/curations" tag="li">Curations</nuxt-link>
         <nuxt-link to="/themes" tag="li">Themes</nuxt-link>
-        <nuxt-link to="/about" tag="li">Info</nuxt-link>
+        <nuxt-link to="/info" tag="li">Info</nuxt-link>
       </ul>
     </nav>
   </header>

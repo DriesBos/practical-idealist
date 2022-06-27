@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     changeBackground() {
-      if (this.$route.name == "blog-slug") {
+      if (this.$route.name == "essays-slug") {
         document.body.style.backgroundColor = "#A3D2E1"
       } else {
         document.body.style.backgroundColor = "#F0EAE8"

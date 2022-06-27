@@ -28,6 +28,7 @@ section
   min-width: $button-min-width
   padding: 1rem 2.5rem
   text-align: center
+  white-space: nowrap
   &:hover
     background-color: $type
     color: white
@@ -96,7 +97,7 @@ section
 
 .landingIndex
   display: flex
-  align-items: flex-start
+  align-items: center
   justify-content: space-between
   margin: 0 9.375vw
   & > div
@@ -104,12 +105,13 @@ section
     flex-direction: column
   &-Left
     margin-right: 6.25vw
+    align-items: flex-start
     h1, h2, p, .authorList
       margin-bottom: 2rem
     .lineClamp
       -webkit-line-clamp: 6
     .btn
-      width: $button-min-width
+      min-width: $button-min-width
 
 .imageWindow
   position: relative

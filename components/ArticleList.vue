@@ -5,7 +5,7 @@
       <template v-if="type === 'vertical-two'">
         <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
           <nuxt-link
-            :to="'/blog/' + post.slug"
+            :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
             class="articleList-Image imageWindow imageWindow-S"
@@ -14,7 +14,7 @@
           </nuxt-link>
 
           <nuxt-link
-            :to="'/blog/' + post.slug"
+            :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
             class="articleList-Content"
@@ -38,7 +38,7 @@
       <template v-else-if="type === 'horizontal'">
         <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
           <nuxt-link
-            :to="'/blog/' + post.slug"
+            :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
             class="articleList-Image imageWindow imageWindow-Horizontal"
@@ -47,7 +47,7 @@
           </nuxt-link>
 
           <nuxt-link
-            :to="'/blog/' + post.slug"
+            :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
             class="articleList-Content"
@@ -71,7 +71,7 @@
       <template v-else-if="type === 'simplelist'">
         <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
           <nuxt-link
-            :to="'/blog/' + post.slug"
+            :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
             class="articleList-Content"
@@ -90,7 +90,7 @@
       <template v-else>
         <li v-for="(post, key) in posts" :key="key" class="articleList-Item">
           <nuxt-link
-            :to="'/blog/' + post.slug"
+            :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
             class="articleList-Image imageWindow imageWindow-S"
@@ -99,7 +99,7 @@
           </nuxt-link>
 
           <nuxt-link
-            :to="'/blog/' + post.slug"
+            :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
             class="articleList-Content"

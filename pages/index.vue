@@ -15,7 +15,7 @@
       </div>
       <div class="landingIndex-Right">
         <nuxt-link
-          :to="'/blog/'"
+          :to="'/essays/'"
           title="to article"
           tag="div"
           class="indexLanding-Image imageWindow imageWindow-Feature"
@@ -25,7 +25,7 @@
       </div>
     </div>
     <ArticleList :posts="posts" type="horizontal" />
-    <nuxt-link class="item btn btn-Wide" to="/blog" tag="li">
+    <nuxt-link class="item btn btn-Wide" to="/essays" tag="li">
       see all essays
     </nuxt-link>
     <div class="item aboutFeature">
