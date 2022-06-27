@@ -22,7 +22,7 @@
           tag="div"
           class="indexLanding-Image imageWindow imageWindow-Feature"
         >
-          <img :src="post.feature_image" />
+          <img class="rotate" :src="post.feature_image" />
         </nuxt-link>
       </div>
     </div>
