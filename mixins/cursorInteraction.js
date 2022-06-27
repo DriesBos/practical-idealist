@@ -41,7 +41,7 @@ export default {
     customCursor() {
       let cursor = document.querySelector(".cursor")
       function moveCursor(e) {
-        gsap.to(cursor, 0.165, {
+        gsap.to(cursor, 0.1, {
           left: e.clientX,
           top: e.clientY
         })
