@@ -8,7 +8,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Image imageWindow imageWindow-S"
+            class="articleList-Image imageWindow imageWindow-S-Side"
           >
             <img :src="post.feature_image" />
           </nuxt-link>

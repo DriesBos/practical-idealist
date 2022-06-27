@@ -18,31 +18,6 @@ section
     user-select: none
   .title
     margin-bottom: var(--spacing-one)
-
-.btn
-  cursor: pointer
-  transition: all .33s ease
-  color: $type
-  border: 1px solid $type
-  border-radius: 2rem
-  min-width: $button-min-width
-  padding: 1rem 2.5rem
-  text-align: center
-  white-space: nowrap
-  &:hover
-    background-color: $type
-    color: white
-  &-Wide
-    width: auto
-    margin: 0 var(--spacing-sides)
-  &.white
-    color: white
-    border: 1px solid white
-    &:hover
-      background-color: white
-      color: $type
-  &.filter
-    text-transform: uppercase
     
 .btn-Container
   display: flex
@@ -110,8 +85,6 @@ section
       margin-bottom: 2rem
     .lineClamp
       -webkit-line-clamp: 6
-    .btn
-      min-width: $button-min-width
 
 .imageWindow
   position: relative
@@ -127,13 +100,19 @@ section
     object-fit: cover
   &-S
     width: 16.5vw
-    height: calc(16.5vw * 1.33)
+    height: calc(16.5vw * 1.4)
+  &-S-Side
+    width: 16.5vw
+    height: calc(16.5vw / 1.4)
+    border: 0
+    img
+      padding: 0
   &-Horizontal
     width: 22vw
-    height: calc(22vw * 1.33)
+    height: calc(22vw * 1.4)
   &-Feature
     width: calc(50vw - 150px)
-    height: calc((50vw - 150px) * 1.33)
+    height: calc((50vw - 150px) * 1.4)
   &-Full
     position: absolute
     top: 0

@@ -43,7 +43,7 @@ export default {
   position: relative
   background-color: #B4ABAB
   width: auto
-  margin: 0 1em
+  margin: 0 1rem
   padding-top: var(--vertical-three)
   padding-bottom: var(--spacing-sides)
   border-radius: 60px
