@@ -37,19 +37,23 @@ export default {
       }
     },
     rotateImage() {
-      let target = document.querySelector(".rotate")
+      let targets = document.querySelectorAll(".rotate")
 
-      function rotatingImage(e) {
-        var xPos = e.clientX / window.innerWidth - 0.5,
-          yPos = e.clientY / window.innerHeight - 0.5
+      targets.forEach(el => {
+        function rotatingImage(e) {
+          var xPos = e.clientX / window.innerWidth - 0.5,
+            yPos = e.clientY / window.innerHeight - 0.5
 
-        gsap.to(target, 1, {
-          rotationY: xPos * 100,
-          rotationX: yPos * 100,
-          ease: "Power1.easeOut"
-        })
-      }
-      document.addEventListener("mousemove", rotatingImage)
+          gsap.to(el, 1, {
+            rotationY: xPos * 50,
+            rotationX: -yPos * 50,
+            ease: "Power1.easeOut"
+          })
+
+          console.log(xPos)
+        }
+        document.addEventListener("mousemove", rotatingImage)
+      })
     }
   }
 }

@@ -43,7 +43,7 @@
             tag="div"
             class="articleList-Image imageWindow imageWindow-Horizontal"
           >
-            <img :src="post.feature_image" />
+            <img class="rotate" :src="post.feature_image" />
           </nuxt-link>
 
           <nuxt-link
@@ -95,7 +95,7 @@
             tag="div"
             class="articleList-Image imageWindow imageWindow-S"
           >
-            <img :src="post.feature_image" />
+            <img class="rotate" :src="post.feature_image" />
           </nuxt-link>
 
           <nuxt-link
