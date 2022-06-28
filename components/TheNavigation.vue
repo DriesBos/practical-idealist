@@ -1,14 +1,20 @@
 <template>
   <header class="header">
-    <nuxt-link class="header-Logo" to="/" tag="div">
+    <nuxt-link class="header-Logo cursorInteract" to="/" tag="div">
       <img src="/logo-wide.png" />
     </nuxt-link>
     <nav class="displayFont uppercase">
       <ul>
-        <nuxt-link to="/essays" tag="li">Essays</nuxt-link>
-        <nuxt-link to="/curations" tag="li">Curations</nuxt-link>
-        <nuxt-link to="/themes" tag="li">Themes</nuxt-link>
-        <nuxt-link to="/info" tag="li">Info</nuxt-link>
+        <nuxt-link class="cursorInteract" to="/essays" tag="li"
+          >Essays</nuxt-link
+        >
+        <nuxt-link class="cursorInteract" to="/curations" tag="li"
+          >Curations</nuxt-link
+        >
+        <nuxt-link class="cursorInteract" to="/themes" tag="li"
+          >Themes</nuxt-link
+        >
+        <nuxt-link class="cursorInteract" to="/info" tag="li">Info</nuxt-link>
       </ul>
     </nav>
   </header>
@@ -38,9 +44,9 @@ export default {
     display: flex
     flex-wrap: nowrap
     li
-      padding-right: 2.5rem
+      margin-right: 2.5rem
     li:last-child
-      padding-right: 0
+      margin-right: 0
   .nuxt-link-exact-active
     text-decoration: underline
 </style>

@@ -8,7 +8,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Image imageWindow imageWindow-S-Side"
+            class="articleList-Image imageWindow imageWindow-S-Side cursorInteract"
           >
             <img :src="post.feature_image" />
           </nuxt-link>
@@ -17,7 +17,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Content"
+            class="articleList-Content cursorInteract"
           >
             <div>
               <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
@@ -41,7 +41,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Image imageWindow imageWindow-Horizontal"
+            class="articleList-Image imageWindow imageWindow-Horizontal cursorInteract"
           >
             <img class="rotate" :src="post.feature_image" />
           </nuxt-link>
@@ -50,7 +50,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Content"
+            class="articleList-Content cursorInteract"
           >
             <div>
               <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
@@ -74,7 +74,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Content"
+            class="articleList-Content cursorInteract"
           >
             <div>
               <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
@@ -93,7 +93,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Image imageWindow imageWindow-S"
+            class="articleList-Image imageWindow imageWindow-S cursorInteract"
           >
             <img class="rotate" :src="post.feature_image" />
           </nuxt-link>
@@ -102,7 +102,7 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Content"
+            class="articleList-Content cursorInteract"
           >
             <div>
               <h1 class="displayFont displayFont-M">{{ post.title }}</h1>

@@ -44,10 +44,10 @@ export default {
           var xPos = e.clientX / window.innerWidth - 0.5,
             yPos = e.clientY / window.innerHeight - 0.5
 
-          gsap.to(el, 1, {
+          gsap.to(el, 0, {
             rotationY: xPos * 50,
             rotationX: -yPos * 50,
-            ease: "Power1.easeOut"
+            ease: "none"
           })
 
           console.log(xPos)

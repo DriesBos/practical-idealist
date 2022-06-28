@@ -5,9 +5,9 @@
     :style="styleObject"
   >
     <ul v-if="nav" class="contentBlock-Nav">
-      <li class="displayFont-Btn uppercase btn">Essays</li>
-      <li class="displayFont-Btn uppercase btn">Video</li>
-      <li class="displayFont-Btn uppercase btn">Art</li>
+      <li class="displayFont-Btn uppercase btn cursorInteract">Essays</li>
+      <li class="displayFont-Btn uppercase btn cursorInteract">Video</li>
+      <li class="displayFont-Btn uppercase btn cursorInteract">Art</li>
     </ul>
     <slot></slot>
   </div>
