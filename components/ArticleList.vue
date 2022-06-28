@@ -10,7 +10,7 @@
             tag="div"
             class="articleList-Image imageWindow imageWindow-S-Side cursorInteract"
           >
-            <img :src="post.feature_image" />
+            <img class="rotate" :src="post.feature_image" />
           </nuxt-link>
 
           <nuxt-link
@@ -138,7 +138,6 @@ export default {
 <style lang="sass">
 .articleList
   width: 100%
-  padding: 0 var(--spacing-sides)
   &.white
     color: white
   &-Content
@@ -146,6 +145,7 @@ export default {
     flex-direction: column
 
   &.simplelist
+    padding: 0 var(--spacing-sides)
     ul
       display: flex
       flex-direction: column
@@ -172,6 +172,7 @@ export default {
               flex-shrink: 0
 
   &.vertical-one
+    padding: 0 var(--spacing-sides)
     ul
       display: flex
       flex-direction: column
@@ -195,6 +196,7 @@ export default {
             margin-top: 1rem
 
   &.vertical-two
+    padding: 0 var(--spacing-sides)
     ul
       columns: 2
       column-gap: 2rem
@@ -217,16 +219,19 @@ export default {
               font-size: 1.5rem
 
   &.horizontal
-    padding-right: 0
     ul
       display: flex
       flex-direction: row
       flex-wrap: nowrap
       overflow-x: auto
-      li
+      .articleList-Item
         flex-direction: column
         max-width: 28vw
         margin-right: 3rem
+        &:first-child
+          margin-left: var(--spacing-sides)
+        &:last-child
+          margin-right: var(--spacing-sides)
         .articleList-Image
           margin-bottom: 1.75rem
           margin-right: 3rem
