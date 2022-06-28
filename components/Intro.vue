@@ -30,9 +30,8 @@ export default {
   padding: 0 var(--spacing-sides)
   h1
     line-height: 1
-  &_Title
-    margin-bottom: 1.5rem
   &_Content
+    margin-top: 2rem
     max-width: $max-width
   &.white
     color: white

@@ -40,7 +40,8 @@ export default {
     color: white
   &.wide
     width: auto
-    margin: 0 var(--spacing-sides)
+    margin-left: var(--spacing-sides)
+    margin-right: var(--spacing-sides)
   &.white
     color: white
     border-color: white

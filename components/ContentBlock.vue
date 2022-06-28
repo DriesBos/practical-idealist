@@ -44,12 +44,13 @@ export default {
   padding-bottom: calc(#{var(--spacing-sides)} / 2)
   border-radius: 60px
   color: inherit
+  & > .item
   & .item:last-child
     margin-bottom: 0
   h1, h2, h3, h4, h5, h6, p, a, p
     color: inherit
   &.nav
-    padding-top: var(--vertical-four)
+    padding-top: 10rem
     color: inherit
   &.border
     border-style: solid

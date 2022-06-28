@@ -25,7 +25,7 @@
       </div>
     </div>
     <ArticleList :posts="posts" type="horizontal" />
-    <Btn text="see all essays" isWide to="/essays" />
+    <Btn class="item" text="see all essays" isWide to="/essays" />
     <div class="item aboutFeature">
       <div class="aboutFeature-Image">
         <img src="/logo-square.png" />
