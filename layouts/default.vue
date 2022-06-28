@@ -9,7 +9,7 @@
       <div class="cursor-One"></div>
       <div class="cursor-Two"></div>
     </div>
-    <!-- <LazyTheFooter /> -->
+    <LazyTheFooter />
   </main>
 </template>
 

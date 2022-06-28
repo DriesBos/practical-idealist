@@ -1,49 +1,39 @@
 <template>
-  <footer>
-    <div class="row">
-      <ul>
-        <nuxt-link to="/" tag="li">Home</nuxt-link>
-        <nuxt-link to="/essays" tag="li">Blog</nuxt-link>
-        <nuxt-link to="/about" tag="li">About</nuxt-link>
-      </ul>
-      <ul>
-        <nuxt-link to="/privacy-policy" tag="li">Privacy Policy</nuxt-link>
-        <nuxt-link to="/terms-and-conditions" tag="li"
-          >Terms & Conditions</nuxt-link
+  <footer class="footer">
+    <div class="footer-BottomRow">
+      <div>
+        <a
+          class="cursorInteract"
+          href="https://www.driesbos.com"
+          target="_blank"
+          title="Site by Dries Bos"
+          rel="noreferrer"
         >
-      </ul>
-      <ul>
-        <li>
-          <a href="" target="_blank" rel="noreferrer">mail</a>
-        </li>
-        <li>
-          <a href="" target="_blank" rel="noreferrer">phone</a>
-        </li>
-        <li>
-          <a href="" target="_blank" rel="noreferrer">instagram</a>
-        </li>
-        <li>
-          <a
-            href="https://www.driesbos.com"
-            target="_blank"
-            title="Site by Dries Bos"
-            rel="noreferrer"
-          >
-            Site by: Dries Bos
-          </a>
-        </li>
-      </ul>
+          Site by Dries Bos
+        </a>
+      </div>
+      <div
+        v-scroll-to="'#scrollToTop'"
+        class="icon icon-ArrowUp footer-Icon cursorInteract"
+        title="UP!"
+        v-html="require('~/assets/images/icon-arrow.svg?include')"
+      ></div>
     </div>
   </footer>
 </template>
 
 <style lang="sass">
-footer
+.footer
   display: flex
   flex-direction: column
-  .row
+  &-BottomRow
     display: flex
     flex-wrap: nowrap
-    ul
-       padding: 1rem
+    justify-content: space-between
+    a
+      text-decoration: none
+    & > div
+      margin: 1rem var(--spacing-sides)
+    .footer-Icon
+      transform: rotate(-90deg)
 </style>

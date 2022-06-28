@@ -3,5 +3,5 @@ import VueScrollTo from "vue-scrollto"
 
 // https://www.npmjs.com/package/vue-scrollto
 Vue.use(VueScrollTo, {
-  duration: 165
+  duration: 300
 })

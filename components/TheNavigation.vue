@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header id="scrollToTop" class="header">
     <nuxt-link class="header-Logo cursorInteract" to="/" tag="div">
       <img src="/logo-wide.png" />
     </nuxt-link>

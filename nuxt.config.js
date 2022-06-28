@@ -66,15 +66,15 @@ module.exports = {
   plugins: [
     "~/plugins/components",
     "~/plugins/filters",
-    "~/plugins/vue-lazyload"
-    // "~/plugins/vue-scrollto"
+    "~/plugins/vue-lazyload",
+    "~/plugins/vue-scrollto"
   ],
 
   // Register modules
   modules: [
     "@nuxtjs/axios",
     "@nuxt/image",
-    // "vue-scrollto/nuxt",
+    "vue-scrollto/nuxt",
     [
       "storyblok-nuxt",
       {
