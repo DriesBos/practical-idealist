@@ -24,14 +24,21 @@ section
   display: flex
   flex-wrap: wrap
   margin-bottom: -1rem
-  li
+  & > div
     margin-right: 2rem
     margin-bottom: 1rem
     &:last-child
       margin-right: 0
-  &.filter
-    li 
-      margin-right: 1rem
+
+.tag-Container
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: -1rem
+  & > div
+    margin-right: 1rem
+    margin-bottom: 1rem
+    &:last-child
+      margin-right: 0
 
 .cursor
   position: fixed

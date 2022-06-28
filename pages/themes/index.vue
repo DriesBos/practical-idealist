@@ -5,35 +5,18 @@
         titleStart="Themes"
         textContent="Explore our complete archive of original & curated essays, videos and art using the filters below."
       />
-      <ul class="btn-Container filter">
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filterer
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-        <nuxt-link class="btn filter cursorInteract" to="/info" tag="li">
-          filter
-        </nuxt-link>
-      </ul>
+      <div class="tag-Container">
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+        <Tag text="Filter" />
+      </div>
     </ContentBlock>
     <ArticleList :posts="posts" type="simplelist" />
   </div>

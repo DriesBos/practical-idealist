@@ -1,14 +1,14 @@
 <template>
   <div
-    :class="{ nav: nav, border: border }"
+    :class="{ nav: nav, border: border, white: isWhite }"
     class="item contentBlock"
     :style="styleObject"
   >
-    <ul v-if="nav" class="contentBlock-Nav">
-      <li class="displayFont-Btn uppercase btn cursorInteract">Essays</li>
-      <li class="displayFont-Btn uppercase btn cursorInteract">Video</li>
-      <li class="displayFont-Btn uppercase btn cursorInteract">Art</li>
-    </ul>
+    <div v-if="nav" class="contentBlock-Nav tag-Container">
+      <Tag text="Essays" :isWhite="isWhite" />
+      <Tag text="Video" :isWhite="isWhite" />
+      <Tag text="Art" :isWhite="isWhite" />
+    </div>
     <slot></slot>
   </div>
 </template>
@@ -18,19 +18,15 @@ export default {
   props: {
     nav: Boolean,
     border: Boolean,
+    isWhite: Boolean,
     bg: {
       type: String,
       default: "#B4ABAB"
-    },
-    color: {
-      type: String,
-      default: "$type"
     }
   },
   data() {
     return {
       styleObject: {
-        color: this.color,
         backgroundColor: this.bg
       }
     }
@@ -65,7 +61,8 @@ export default {
     right: 0
     display: flex
     flex-wrap: nowrap
-    padding: 1.5rem
+    padding-top: 2rem
+    padding-right: 2rem
     color: inherit
     li
       margin-right: 1.5rem

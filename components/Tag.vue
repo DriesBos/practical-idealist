@@ -1,24 +1,14 @@
 <template>
-  <div :class="color" class="tag cursorInteract" :style="styleObject">
-    {{ content }}
+  <div :class="{ white: isWhite }" class="tag cursorInteract">
+    {{ text }}
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    content: String,
-    color: {
-      type: String,
-      default: "black"
-    }
-  },
-  data() {
-    return {
-      styleObject: {
-        color: this.color
-      }
-    }
+    text: String,
+    isWhite: Boolean
   }
 }
 </script>
@@ -26,19 +16,25 @@ export default {
 <style lang="sass">
 .tag
   transition: all .33s ease
-  color: inherit
+  color: $type
+  border-style: solid
+  border-color: $type
+  border-width: 1.5px
+  border-radius: 1000px
+  padding: 1em 2em
+  text-align: center
+  white-space: nowrap
   font-family: 'Adieu', Helvetica, Arial, sans-serif
   text-transform: uppercase
   line-height: 1
   font-size: 0.7rem
-  padding: 1em 2em
-  border-style: solid
-  border-color: inherit
-  border-width: 1.5px
-  border-radius: 1000px
-  text-align: center
-  white-space: nowrap
   &:hover
-    background-color: inherit
+    background-color: $type
     color: white
+  &.white
+    color: white
+    border-color: white
+    &:hover
+      background-color: white
+      color: $type
 </style>
