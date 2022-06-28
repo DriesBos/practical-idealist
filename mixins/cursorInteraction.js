@@ -18,6 +18,7 @@ export default {
       )
   },
   updated() {
+    this.removeChangeCursor()
     document
       .querySelectorAll(".cursorInteract")
       .forEach(item => item.addEventListener("mouseover", this.changeCursor))
@@ -28,6 +29,7 @@ export default {
       )
   },
   destroyed() {
+    this.removeChangeCursor()
     document
       .querySelectorAll(".cursorInteract")
       .forEach(item => item.removeEventListener("mouseover", this.changeCursor))
@@ -41,9 +43,10 @@ export default {
     customCursor() {
       let cursor = document.querySelector(".cursor")
       function moveCursor(e) {
-        gsap.to(cursor, 0.1, {
+        gsap.to(cursor, 0.165, {
           left: e.clientX,
-          top: e.clientY
+          top: e.clientY,
+          ease: "ease"
         })
       }
       document.addEventListener("mousemove", moveCursor)

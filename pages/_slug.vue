@@ -10,7 +10,12 @@
 </template>
 
 <script>
+import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+import onPageLoad from "@/mixins/onPageLoad"
+import cursorInteraction from "@/mixins/cursorInteraction"
+
 export default {
+  mixins: [lazyLoadComponents, onPageLoad, cursorInteraction],
   asyncData(context) {
     return context.app.$storyapi
       .get(`cdn/stories/${context.params.slug}`, {

@@ -19,9 +19,10 @@
 import { getSinglePost } from "../../api/posts"
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
 import onPageLoad from "@/mixins/onPageLoad"
+import cursorInteraction from "@/mixins/cursorInteraction"
 
 export default {
-  mixins: [lazyLoadComponents, onPageLoad],
+  mixins: [lazyLoadComponents, onPageLoad, cursorInteraction],
   async asyncData({ params }) {
     const post = await getSinglePost(params.slug)
     return { post: post }

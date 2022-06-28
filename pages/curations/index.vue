@@ -11,9 +11,10 @@
 import { getAllPosts } from "../../api/posts"
 import lazyLoadComponents from "@/mixins/lazyLoadComponents"
 import onPageLoad from "@/mixins/onPageLoad"
+import cursorInteraction from "@/mixins/cursorInteraction"
 
 export default {
-  mixins: [lazyLoadComponents, onPageLoad],
+  mixins: [lazyLoadComponents, onPageLoad, cursorInteraction],
   async asyncData() {
     const posts = await getAllPosts()
     return { posts: posts }

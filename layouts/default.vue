@@ -14,11 +14,12 @@
 </template>
 
 <script>
-import lazyLoadComponents from "@/mixins/lazyLoadComponents"
-import onPageLoad from "@/mixins/onPageLoad"
-import cursorInteraction from "@/mixins/cursorInteraction"
+// import lazyLoadComponents from "@/mixins/lazyLoadComponents"
+// import onPageLoad from "@/mixins/onPageLoad"
+// import cursorInteraction from "@/mixins/cursorInteraction"
 
-export default {
-  mixins: [lazyLoadComponents, onPageLoad, cursorInteraction]
-}
+// export default {
+//   mixins: [lazyLoadComponents, onPageLoad, cursorInteraction]
+// }
+//
 </script>
