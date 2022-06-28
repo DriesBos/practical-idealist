@@ -46,18 +46,18 @@
         </div>
       </div>
     </div>
-    <ContentBlock color="white" bg="#B4ABAB">
-      <Intro color="white" titleStart="Curated" titleEnd="Essays" />
-      <ArticleList :posts="posts" type="vertical-two" />
+    <ContentBlock bg="#B4ABAB">
+      <Intro isWhite titleStart="Curated" titleEnd="Essays" />
+      <ArticleList isWhite :posts="posts" type="vertical-two" />
       <Btn text="see all essays" isWide isWhite to="/curated" />
     </ContentBlock>
-    <ContentBlock color="white" bg="#212121">
-      <Intro color="white" titleStart="Curated" titleEnd="Videos" />
-      <ArticleList :posts="posts" type="vertical-two" />
+    <ContentBlock bg="#212121">
+      <Intro isWhite titleStart="Curated" titleEnd="Videos" />
+      <ArticleList isWhite :posts="posts" type="vertical-two" />
       <Btn text="see all videos" isWide isWhite to="/curated" />
     </ContentBlock>
     <ContentBlock bg="white">
-      <Intro color="black" titleStart="Curated" titleEnd="Art" />
+      <Intro titleStart="Curated" titleEnd="Art" />
       <ArticleList :posts="posts" type="vertical-two" />
       <Btn text="see all art" isWide to="/curated" />
     </ContentBlock>

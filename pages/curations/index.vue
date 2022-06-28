@@ -1,8 +1,8 @@
 <template>
   <div class="page">
-    <ContentBlock nav color="white" bg="#B4ABAB">
-      <Intro titleStart="Curated" titleEnd="Essays" />
-      <ArticleList :posts="posts" type="vertical-two" />
+    <ContentBlock nav isWhite bg="#B4ABAB">
+      <Intro isWhite titleStart="Curated" titleEnd="Essays" />
+      <ArticleList isWhite :posts="posts" type="vertical-two" />
     </ContentBlock>
   </div>
 </template>

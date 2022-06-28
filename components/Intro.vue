@@ -1,9 +1,9 @@
 <template>
-  <div class="item intro">
+  <div :class="{ white: isWhite }" class="item intro">
     <div class="intro_Title">
       <h1 class="displayFont displayFont-L uppercase">
         {{ titleStart }}
-        <span class="typeStroke" :style="styleObject">{{ titleEnd }}</span>
+        <span class="typeStroke">{{ titleEnd }}</span>
       </h1>
     </div>
     <div v-if="textContent" class="intro_Content">
@@ -20,17 +20,7 @@ export default {
     titleStart: String,
     titleEnd: String,
     textContent: String,
-    color: {
-      type: String,
-      default: "$type"
-    }
-  },
-  data() {
-    return {
-      styleObject: {
-        textStrokeColor: this.color
-      }
-    }
+    isWhite: Boolean
   }
 }
 </script>
@@ -44,4 +34,9 @@ export default {
     margin-bottom: 1.5rem
   &_Content
     max-width: $max-width
+  &.white
+    color: white
+    .typeStroke
+      -webkit-text-stroke-color: white
+      text-stroke-color: white
 </style>

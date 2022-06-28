@@ -1,5 +1,5 @@
 <template>
-  <div :class="type" class="item articleList">
+  <div :class="[{ white: isWhite }, type]" class="item articleList">
     <ul>
       <!-- VERTICAL TWO -->
       <template v-if="type === 'vertical-two'">
@@ -124,7 +124,8 @@
 export default {
   props: {
     posts: Array,
-    type: String
+    type: String,
+    isWhite: Boolean
   }
 }
 </script>
@@ -133,6 +134,8 @@ export default {
 .articleList
   width: 100%
   padding: 0 var(--spacing-sides)
+  &.white
+    color: white
   &-Content
     display: flex
     flex-direction: column

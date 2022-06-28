@@ -40,8 +40,8 @@ export default {
   background-color: #B4ABAB
   width: auto
   margin: 0 1rem
-  padding-top: var(--vertical-three)
-  padding-bottom: var(--spacing-sides)
+  padding-top: var(--spacing-sides)
+  padding-bottom: calc(#{var(--spacing-sides)} / 2)
   border-radius: 60px
   color: inherit
   & .item:last-child

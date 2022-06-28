@@ -9,7 +9,7 @@
           One who simultaneously employs idealistic and pragmatic thinking to
           design visionary systems that can actually be built
         </p>
-        <nuxt-link class="btn" to="/" tag="div">our manifesto</nuxt-link>
+        <Btn text="our manifesto" to="#our-manifesto" />
       </div>
       <div class="landingIndex-Right">
         <nuxt-link
@@ -18,7 +18,7 @@
           tag="div"
           class="indexLanding-Image imageWindow imageWindow-Feature"
         >
-          <img :src="post.feature_image" />
+          <img class="rotate" :src="post.feature_image" />
         </nuxt-link>
       </div>
     </div>
