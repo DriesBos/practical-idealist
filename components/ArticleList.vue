@@ -19,8 +19,8 @@
             tag="div"
             class="articleList-Content cursorInteract"
           >
-            <div>
-              <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
+            <div class="articleList-Content_Title">
+              <h1 class="displayFont">{{ post.title }}</h1>
             </div>
 
             <div class="authorList">
@@ -52,8 +52,8 @@
             tag="div"
             class="articleList-Content cursorInteract"
           >
-            <div>
-              <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
+            <div class="articleList-Content_Title">
+              <h1 class="displayFont">{{ post.title }}</h1>
             </div>
 
             <div class="authorList">
@@ -76,8 +76,13 @@
             tag="div"
             class="articleList-Content cursorInteract"
           >
-            <div>
-              <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
+            <div class="articleList-Content_Title">
+              <h1 class="displayFont">{{ post.title }}</h1>
+              <div
+                class="icon icon-Arrow"
+                title="view essay"
+                v-html="require('~/assets/images/icon-arrow.svg?include')"
+              ></div>
             </div>
             <div class="tagFont articleList-Content_Tag">
               curated essay
@@ -104,8 +109,8 @@
             tag="div"
             class="articleList-Content cursorInteract"
           >
-            <div>
-              <h1 class="displayFont displayFont-M">{{ post.title }}</h1>
+            <div class="articleList-Content_Title">
+              <h1 class="displayFont">{{ post.title }}</h1>
             </div>
 
             <AuthorList :authors="post.authors" />
@@ -157,7 +162,12 @@ export default {
           align-items: center
           & > div
             &:first-child
-              padding-right: 5em
+              display: flex
+              align-items: center
+              padding-right: 5rem
+              h1
+                font-size: 1.5rem
+                padding-right: 1rem
             &:last-child
               flex-shrink: 0
 
@@ -168,31 +178,43 @@ export default {
       li
         display: flex
         flex-wrap: nowrap
-        margin-bottom: var(--vertical-two)
+        margin-bottom: 4rem
         &:last-child
           margin-bottom: 0
         .articleList-Image
           flex-shrink: 0
-          margin-right: 2rem
-        .articleList-Content_Text
-          max-width: $max-width
+          margin-right: 3rem
+        .articleList-Content
+          justify-content: center
+          &_Title
+            margin-bottom: .75rem
+            h1
+              font-size: 2rem
+          &_Text
+            max-width: $max-width
+            margin-top: 1rem
 
   &.vertical-two
     ul
       columns: 2
-      column-gap: var(--spacing-sides)
+      column-gap: 2rem
       li
         display: flex
         flex-wrap: nowrap
         flex-shrink: 1
-        margin-bottom: var(--vertical-two)
-        &:last-child
-          margin-bottom: 0
+        margin-bottom: 1rem
+        height: calc((16.5vw / 1.33) + 6rem)
+        -webkit-column-break-inside: avoid
+        page-break-inside: avoid
+        break-inside: avoid
         .articleList-Image
           flex-shrink: 0
           margin-right: 2rem
-        .articleList-Content_Text
-          max-width: $max-width
+        .articleList-Content
+          &_Title
+            margin-bottom: .75rem
+            h1
+              font-size: 1.5rem
 
   &.horizontal
     padding-right: 0
@@ -204,9 +226,13 @@ export default {
       li
         flex-direction: column
         max-width: 28vw
-        margin-right: var(--vertical-three)
+        margin-right: 3rem
         .articleList-Image
           margin-bottom: 1.75rem
-        .authorList
-          margin-top: 1rem
+          margin-right: 3rem
+        .articleList-Content
+          &_Title
+            margin-bottom: .75rem
+            h1
+              font-size: 2rem
 </style>
