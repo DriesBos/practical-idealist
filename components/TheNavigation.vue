@@ -5,28 +5,64 @@
     </nuxt-link>
     <nav class="displayFont uppercase">
       <ul>
-        <nuxt-link class="cursorInteract" to="/essays" tag="li"
+        <nuxt-link class="cursorInteract hyperLink" to="/essays" tag="li"
           >Essays</nuxt-link
         >
-        <nuxt-link class="cursorInteract" to="/curations" tag="li"
+        <nuxt-link class="cursorInteract hyperLink" to="/curations" tag="li"
           >Curations</nuxt-link
         >
-        <nuxt-link class="cursorInteract" to="/themes" tag="li"
+        <nuxt-link class="cursorInteract hyperLink" to="/themes" tag="li"
           >Themes</nuxt-link
         >
-        <nuxt-link class="cursorInteract" to="/info" tag="li">Info</nuxt-link>
+        <nuxt-link class="cursorInteract hyperLink" to="/info" tag="li"
+          >Info</nuxt-link
+        >
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
+// import { gsap } from "gsap"
+
 export default {
   name: "TheNavigation"
+  // mounted() {
+  //   gsap.to(".hyperLink.nuxt-link-exact-active", {
+  //     "--var": "100%",
+  //     duration: 0.66,
+  //     delay: 0.33,
+  //     ease: "ease"
+  //   })
+  // }
 }
 </script>
 
 <style lang="sass">
+.hyperLink
+  --var: 0% // Hyperlink
+  --border-width: 1.5px
+  position: relative
+  white-space: nowrap
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    display: inline-block
+    bottom: calc(0px - (#{var(--border-width)} / 2))
+    top: 0
+    width: var(--var)
+    z-index: 0
+    border-bottom: var(--border-width) solid $type
+  &:hover
+    &::before
+      @media ( hover: hover )
+        animation: hyperLink .33s ease
+        animation-iteration-count: 1
+  &.nuxt-link-exact-active, &:hover
+    --var: 100%
+
+
 .header
   position: relative
   display: flex
@@ -48,5 +84,5 @@ export default {
     li:last-child
       margin-right: 0
   .nuxt-link-exact-active
-    text-decoration: underline
+    text-decoration: none
 </style>

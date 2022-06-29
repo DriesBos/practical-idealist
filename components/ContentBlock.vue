@@ -39,7 +39,7 @@ export default {
   position: relative
   background-color: #B4ABAB
   width: auto
-  margin: 0 1rem
+  margin: 1rem
   padding-top: var(--spacing-sides)
   padding-bottom: calc(#{var(--spacing-sides)} / 2)
   border-radius: 60px
