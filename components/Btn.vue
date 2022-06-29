@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :class="{ white: isWhite, wide: isWide }"
+    :class="{ white: isWhite, black: isBlack, wide: isWide }"
     class="btn cursorInteract"
     :to="to"
     tag="div"
@@ -15,7 +15,8 @@ export default {
     text: String,
     to: String,
     isWhite: Boolean,
-    isWide: Boolean
+    isWide: Boolean,
+    isBlack: Boolean
   }
 }
 </script>
@@ -36,8 +37,8 @@ export default {
   font-size: 0.8rem
   min-width: $button-min-width
   &:hover
-    background-color: $type
     color: white
+    background-color: $type
   &.wide
     width: auto
     margin-left: var(--spacing-sides)
@@ -46,6 +47,14 @@ export default {
     color: white
     border-color: white
     &:hover
-      background-color: white
       color: $type
+      background-color: white
+  &.black
+    color: white
+    background-color: $type
+    border-color: $type
+    &:hover
+      color: $type
+      background-color: white
+      border-color: $type
 </style>

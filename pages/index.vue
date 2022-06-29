@@ -28,7 +28,7 @@
     <Btn class="item" text="see all essays" isWide to="/essays" />
     <div class="item aboutFeature">
       <div class="aboutFeature-Image">
-        <img src="/logo-square.png" />
+        <img class="logoSquare" src="/logo-square.png" />
       </div>
       <div class="aboutFeature-Content">
         <h1 class="displayFont displayFont-M uppercase">
