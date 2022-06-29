@@ -18,9 +18,9 @@
           :to="'/essays/'"
           title="to article"
           tag="div"
-          class="indexLanding-Image imageWindow imageWindow-Feature"
+          class="indexLanding-Image rotate imageWindow imageWindow-Feature"
         >
-          <img class="rotate" :src="post.feature_image" />
+          <img class="" :src="post.feature_image" />
         </nuxt-link>
       </div>
     </div>

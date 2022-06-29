@@ -8,9 +8,9 @@
             :to="'/essays/' + post.slug"
             title="to article"
             tag="div"
-            class="articleList-Image imageWindow imageWindow-S-Side cursorInteract"
+            class="articleList-Image rotate imageWindow imageWindow-S-Side cursorInteract"
           >
-            <img class="rotate" :src="post.feature_image" />
+            <img class="" :src="post.feature_image" />
           </nuxt-link>
 
           <nuxt-link
