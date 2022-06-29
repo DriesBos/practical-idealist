@@ -34,12 +34,14 @@
           Site by Dries Bos
         </a>
       </div>
-      <div
-        v-scroll-to="'#scrollToTop'"
-        class="icon icon-ArrowUp footer-Icon cursorInteract"
-        title="UP!"
-        v-html="require('~/assets/images/icon-arrow.svg?include')"
-      ></div>
+      <div class="icon icon-ArrowUp footer-Icon cursorInteract">
+        <nuxt-img
+          v-scroll-to="'#scrollToTop'"
+          title="UP!"
+          format="svg"
+          src="icon-arrow.svg"
+        />
+      </div>
     </div>
   </footer>
 </template>

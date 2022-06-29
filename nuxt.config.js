@@ -53,6 +53,10 @@ module.exports = {
 
   target: "static",
 
+  // image: {
+  //   // Options
+  // },
+
   // Register CSS files
   css: [
     "@/assets/styles/reset.css",
@@ -73,8 +77,8 @@ module.exports = {
   // Register modules
   modules: [
     "@nuxtjs/axios",
-    "@nuxt/image",
     "vue-scrollto/nuxt",
+    "@nuxt/image",
     [
       "storyblok-nuxt",
       {
@@ -130,13 +134,13 @@ module.exports = {
   buildModules: [
     [
       "@nuxtjs/pwa",
+      // "@nuxt/image",
       {
         icon: false // disables the icon module due dynamic favicon
       }
     ],
     "@nuxtjs/dotenv",
-    "@nuxtjs/style-resources",
-    "@aceforth/nuxt-optimized-images"
+    "@nuxtjs/style-resources"
     // [
     //   "@nuxtjs/google-analytics",
     //   {
@@ -148,11 +152,6 @@ module.exports = {
   // Settings for "@nuxtjs/style-resources"
   styleResources: {
     sass: "./assets/styles/vars/*.sass"
-  },
-
-  // Settings for "@aceforth/nuxt-optimized-images"
-  optimizedImages: {
-    optimizeImages: true
   },
 
   // Settings for PWA

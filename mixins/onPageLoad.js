@@ -49,8 +49,6 @@ export default {
             rotationX: -yPos * 40,
             ease: "ease"
           })
-
-          console.log(xPos)
         }
         document.addEventListener("mousemove", rotatingImage)
       })
